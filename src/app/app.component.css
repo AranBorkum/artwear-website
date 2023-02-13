@@ -1,0 +1,16 @@
+
+.title-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+app-footer-content {
+  position: fixed;
+  bottom: 0;
+}
+
+.router-outlet-div {
+  margin: 5px 5px 70px 5px;
+  overflow-y: scroll;
+}
