@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/artwear-website",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

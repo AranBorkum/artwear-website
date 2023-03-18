@@ -6,6 +6,10 @@ import {BlogComponent} from "./blog/blog.component";
 import {EventsComponent} from "./events/events.component";
 import {AboutMeComponent} from "./footer-content/about-me/about-me.component";
 import {ContactComponent} from "./footer-content/contact/contact.component";
+import {SignUpComponent} from "./sign-up/sign-up.component";
+import {SignInComponent} from "./sign-in/sign-in.component";
+import {ForgotPasswordComponent} from "./forgot-password/forgot-password.component";
+import {VerifyEmailComponent} from "./verify-email/verify-email.component";
 
 const routes: Routes = [
   {path: "home", component: LandingPageComponent},
@@ -14,6 +18,11 @@ const routes: Routes = [
   {path: "events", component: EventsComponent},
   {path: "about", component: AboutMeComponent},
   {path: "contact", component: ContactComponent},
+  {path: "sign-up", component: SignUpComponent},
+  {path: "sign-in", component: SignInComponent},
+  {path: "password-recovery", component: ForgotPasswordComponent},
+  {path: "verify-email-address", component: VerifyEmailComponent},
+
   {path: "", redirectTo: "/home", pathMatch: 'full'},
   {path: "**", redirectTo: "/home", pathMatch: "full"}
 ];

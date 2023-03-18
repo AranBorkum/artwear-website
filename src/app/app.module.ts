@@ -12,6 +12,20 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterContentComponent } from './footer-content/footer-content.component';
 import { AboutMeComponent } from './footer-content/about-me/about-me.component';
 import { ContactComponent } from './footer-content/contact/contact.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { environment } from '../environments/environment';
+import firebase from "firebase/compat";
+import { AuthService } from "./shared/services/auth.service";
+import { SignInComponent } from './sign-in/sign-in.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
+
 
 @NgModule({
   declarations: [
@@ -23,14 +37,23 @@ import { ContactComponent } from './footer-content/contact/contact.component';
     NavbarComponent,
     FooterContentComponent,
     AboutMeComponent,
-    ContactComponent
+    ContactComponent,
+    SignUpComponent,
+    SignInComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,
     RouterOutlet,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
